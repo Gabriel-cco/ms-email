@@ -1,0 +1,29 @@
+spring:
+  mail:
+    host: ${HOST}
+    username: ${USERNAME}
+    port: ${PORT}'
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+    password: ${PASSWORD}
+  datasource:
+    password: ${DATA_PASSWORD}
+    username: ${DATA_USERNAME}
+    url: ${DATA_URL}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  rabbitmq:
+    queue: ms.email
+    addresses: ${RABBITMQ_HOST}
+server:
+  port:
+
+logging:
+  level:
+    com:
+      ms.email: TRACE
